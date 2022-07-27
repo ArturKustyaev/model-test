@@ -1,0 +1,11 @@
+.container {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}

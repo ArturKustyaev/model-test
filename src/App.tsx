@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Model } from 'components'
+import { IModel, IParam } from 'types'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const params: IParam[] = [
+	{
+		id: 1,
+		name: 'Назначение'
+	},
+	{
+		id: 2,
+		name: 'Длина'
+	},
+	{
+		id: 3,
+		name: 'Производство'
+	}
+]
+
+const model: IModel = {
+	paramValues: [
+		{ paramId: 1, value: 'подвседневное' },
+		{ paramId: 2, value: 'макси' },
+		{ paramId: 3, value: 'Китай' }
+	],
+	colors: ['black', 'red']
 }
 
-export default App;
+function App() {
+	return (
+		<div className='App'>
+			<Model model={model} params={params} />
+		</div>
+	)
+}
+
+export default App
